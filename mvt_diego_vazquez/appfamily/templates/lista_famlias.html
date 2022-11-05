@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS FAMILIA</title>
+</head>
+<body>
+    <table>
+        <thead>
+
+            <tr>
+        
+                <td>#</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>DNI</td>
+                <td>Fecha de Nacimiento</td>
+                <td>VIVE</td>
+            </tr>
+        </thead>
+        <tbody>
+         
+            {% for familia in familias %}
+        
+            <tr>
+                <td>{{familia.id}}</td>
+                <td>{{familia.nombre}}</td>
+                <td>{{familia.apellido}}</td>
+                <td>{{familia.dni}}</td>
+                <td>{{familia.fecha_nacimiento}}</td>
+                <td>{{familia.vive}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+
+
+    </table>
+    
+</body>
+</html>
+
+
+
+
+
+
