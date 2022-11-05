@@ -4,10 +4,11 @@ from .models import Familia
 
 # Create your views here.
 
-def home(request):
+
+
+def inicio(request):
     familias=Familia.objects.all()
-    #return HttpResponse("<h1>HOLA MUNDO!</h1>")
-    return render(request,"lista_famlias.html", {"familias": familias})
+    return render(request, "appfamily/index.html", {"familias": familias})
 
 #def listado_familias(request):
  #   familias = Familia.objects.all()

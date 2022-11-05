@@ -19,6 +19,5 @@ from appfamily.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path("", home),
-    path("familias", home),
+    path("", inicio)
 ]

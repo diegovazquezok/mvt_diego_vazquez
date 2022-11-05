@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  {% load static %}
+  <title>My family template</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" charset="utf-8" />
+</head>
+<body>
+<div id="wrapper">
+  <h1>Mi Familia</h1>
+  <div id="family"></div>
+  <div id="head-top"></div>
+  <div id="head-right"></div>
+  <div id="nav">
+    
+    <div id="nav-bot"></div>
+  </div>
+  <div id="body">
+    <div class="i">
+      <h2 class="shallow"><strong>Bienvenido</strong> a mi familia</h2>
+      <p>Esta Web contiene datos importantes sobre mi familia.</p>
+
+      <p class="more"><a href="#"></a></p>
+      <h2 class="shallow"><strong>Family</strong> photo gallery</h2>
+      <p><img src="{% static 'images/gallery.jpg' %}" width="233" height="161" alt="Gallery" class="left" /></p>
+
+      <div class="clear"></div>
+      <h2><strong>Familia</strong> datos</h2>
+      <table>
+        <thead>
+
+            <tr>
+        
+                <td>#</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>DNI</td>
+                <td>Fecha de Nacimiento</td>
+                <td>VIVE</td>
+            </tr>
+        </thead>
+        <tbody>
+         
+            {% for familia in familias %}
+        
+            <tr>
+                <td>{{familia.id}}</td>
+                <td>{{familia.nombre}}</td>
+                <td>{{familia.apellido}}</td>
+                <td>{{familia.dni}}</td>
+                <td>{{familia.fecha_nacimiento}}</td>
+                <td>{{familia.vive}}</td>
+            </tr>
+            {% endfor %}
+      
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
